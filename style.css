@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c499dd;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.wheel {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    transition: transform 4s cubic-bezier(0.5, 0.1, 0.1, 1);
+    transform-origin: center;
+    border: 5px solid #333;
+    border-radius: 50%;
+}
+
+.outer-circle {
+    fill: #FFD700;
+}
+
+.inner-circle {
+    fill: #f8d52ae1;
+    stroke: #c7a200;
+    stroke-width: 2;
+}
+
+.arrow {
+    position: absolute;
+    top: 41%;
+    right: -16px;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 50px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 70px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 380px;
+    }
+
+    .wheel {
+        max-width: 380px;
+    }
+
+    .arrow {
+        right: -12px;
+        top: 40.5%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 340px;
+    }
+
+    .wheel {
+        max-width: 340px;
+    }
+
+    .arrow {
+        font-size: 40px;
+        right: -5px;
+        top: 39.5%;
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .wheel {
+        max-width: 300px;
+    }
+
+    .arrow {
+        font-size: 35px;
+        right: -3px;
+        top: 39.5%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        max-width: 280px;
+    }
+
+    .wheel {
+        max-width: 280px;
+    }
+
+    .arrow {
+        font-size: 30px;
+        right: -1px;
+        top: 39%
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
